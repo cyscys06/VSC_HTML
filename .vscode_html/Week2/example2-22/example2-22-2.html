@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>srcdoc 속성 활용</title> 
+    </head>
+    <body>
+        <h3>srcdoc에 HTML 문서 작성</h3>
+        <hr>
+        <iframe src="iframe1.html" width="200" height="80"
+                srcdoc="<html><head></head>
+                <body>hello</body></html>">
+        </iframe>
+    </body>
+</html>
+
+<!-- srcdoc: <iframe> 요소(윈도우)에 보일 웹 페이지(다른 html파일)의 HTML 코드를 명시하는 기능 -->
+<!-- srcdoc가 존재하는 경우 src 속성의 값을 아예 무시해서, 
+ src에서 어떤 파일을 갖고와서 출력하려 했던게 srcdoc에 있는 html코드로 대체돼고 대체한 코드가 대신 출력됨 -->
+<!-- 코드를 실행해보면 원래 iframe1.html의 코드 대신 srcdoc에 있는 코드가 출력된 모습을 볼 수 있음 -->
