@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>변수 선언</title>
+    </head>
+    <body>
+        <h3>변수 선언, 전역/지역/블록 변수</h3>
+        <hr>
+        <script>
+            let x; // 전역 변수 선언
+                   // 자바스크립트는 별도의 자료형(int, double 등)이 없음
+                   // 대신 변수를 선언할때 사용하는 키워드는 var, let가 있고 둘다 씀
+                   // const는 변수를 상수로 선언할때 사용
+            
+            function f() {
+                let y; 
+                x = 10;
+                y = 20; 
+                z = 30; 
+                // 이전에 변수 z를 선언하지 않아서 
+                // 새로운 전역 변수 z가 선언되고 30이 저장됨
+                
+                if(y == 20) {
+                    let b = 40;
+                    b++;
+                    document.write("if 블록 내 블록변수 b = " + b + "<br>");
+                }
+                document.write("함수 f() 내 지역변수 y = " + y + "<br>");
+            }
+            
+            f(); 
+            document.write("전역변수 x = " + x + "<br>");
+            document.write("전역변수 z = " + z);
+        </script>
+    </body>
+</html>
+
+<!-- 자바스크립트도 this 있음. 하지만 var형 변수에서만 사용 가능하고 let에서는 불가능 -->
+<!-- let으로 선언한 변수는 같은 이름의 변수를 재선언 불가-->

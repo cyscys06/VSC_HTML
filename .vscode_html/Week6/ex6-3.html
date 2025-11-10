@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>외부 파일에 자바스크립트 작성</title>
+        <!-- 외부 자바스크립트 파일을 불러옴 -->
+        <!-- 외부 파일 불러올때는 <script> 코드 안에 별도의 자바스크립트 코드 작성하면 안됨 -->
+        <script src="js/lib.js"> 
+        </script>
+    </head>
+    <body>
+        <h3>마우스 올려 보세요</h3>
+        <hr>
+        <img src="image/apple.jpg" alt="이미지"
+            onmouseover="over(this)"
+            onmouseout="out(this)">
+    </body>
+</html>
+
+<!-- 3. 자바스크립트 코드를 별도의 파일에 작성 후 html 파일에서 import하는 방법 -->

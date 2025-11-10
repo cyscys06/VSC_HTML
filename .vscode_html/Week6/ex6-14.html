@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>문자열 연산</title>
+    </head>
+    <body>
+        <h3>문자열 연산</h3>
+        <hr>
+        <script>
+            document.write("abc" + 23 + "<br>");
+            document.write(23 + "abc" + "<br>");
+            document.write(23 + "35" + "<br>");
+            document.write(23 + 35 + "<br>"); 
+            document.write(23 + 35 + "abc" + "<br>"); 
+            // 앞의 두 수 먼저 더해서 58 됨
+            document.write("abc" + 23 + 35 + "<br><hr>"); 
+            // 문자열 abc에 숫자 23이 문자열로 더해져서 뒤의 35도 문자열로 붙음
+            
+            let name = "kitae";
+            
+            document.write(name == "kitae");
+            document.write("<br>");
+            document.write(name > "park");
+        </script>
+    </body>
+</html>
+
+<!-- 문자열 연산 순위 주의할 것. 항상 맨 왼쪽부터 시작해서 오른쪽으로 점차 연산함 -->
