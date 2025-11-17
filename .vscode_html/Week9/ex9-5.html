@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>이벤트 객체 전달받기</title>
+    </head>
+    <body>
+        <p id="p">이곳에 마우스를 올려 보세요</p>
+        <button onclick="f(event)">클릭하세요</button> <!-- event라는 이름으로 이벤트 객체를 함수에 전달 -->
+        <script>
+            function f(e) { // e는 현재 발생한 이벤트 객체
+                alert(e.type); // 이벤트 종류 출력
+            }
+            document.getElementById("p").onmouseover = f;
+        </script>
+    </body>
+</html>
+
+<!-- 이벤트 객체: 발생할 이벤트와 관련된 정보를 담은 객체 -->
+<!-- 이벤트가 발생한 경우에만 객체가 생성되고, 이벤트가 종료되면 객체도 같이 소멸됨 -->
+<!-- 이벤트 객체는 이벤트 리스너 함수의 첫번째 매개변수로 전달됨.
+ html 태그에서는 event라는 이름으로 전달됨 -->

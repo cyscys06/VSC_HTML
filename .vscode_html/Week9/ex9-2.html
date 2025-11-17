@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>DOM 객체의 이벤트 리스너 프로퍼티에 함수 등록</title>
+        <script>
+            let p; 
+            function init() { // 문서가 완전히 로드되는 시점에 생성자 호출
+                p = document.getElementById("p"); // id가 p인 요소의 속성을 변수p에 할당
+                p.onmouseover = over; // 정의해놓은 over 함수를 onmouseover 이벤트의 리스너로 등록
+                p.onmouseout = out; // 정의해놓은 out 함수를 onmouseout 이벤트의 리스너로 등록
+            }
+            function over() { 
+                p.style.backgroundColor="orchid"; 
+            }
+            // id가 p인 태그가 갖고 있는 텍스트의 배경색을 orphid로 설정(onmouseover이벤트 발생 시)
+            function out() {
+                p.style.backgroundColor="white";
+            }
+        </script>
+    </head>
+    <body onload="init()"> <!-- 생성자 호출 -->
+    <h3>DOM 객체의 이벤트 리스너 프로퍼티에 함수 등록</h3>
+    <hr>
+    <p id="p">마우스 올리면 orchid 색으로 변경</p>
+    </body>
+</html>

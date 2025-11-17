@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>switch</title>
+    </head>
+    <body>
+        <h3>switch 문으로 커피 주문</h3>
+        <hr>
+        <script>
+            let price = 0;
+            let coffee = prompt("무슨 커피 드릴까요?", "");
+            switch(coffee) {
+                case "espresso" : // 같은 의미인 값들 같이 걸러내기 위함
+                case "에스프레소" : price = 2000;
+                break;
+                
+                case "카푸치노" : price = 3000;
+                break;
+                
+                case "카페라떼" : price = 3500;
+                break;
+                
+                default :
+                document.write(coffee + "는 없습니다.");
+            }
+            
+            if(price != 0) {
+                document.write(coffee + "는 " + price + "원입니다.");
+            }
+        </script>
+    </body>
+</html>
+
+<!-- write(print): 그냥 한줄로 출력만 함 -->
+<!-- writeln(println): 출력값 맨 끝에 개행문자 추가 -->

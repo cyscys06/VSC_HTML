@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>객체 생성 및 활용</title>
+    </head>
+    <body>
+        <h3>객체 생성 및 활용</h3>
+        <hr>
+        <script>
+            let today = new Date(); // 자바스크립트에서 객체 생성하는 방식: 변수 선언 후 new로 동적 메모리 할당
+            document.write("현재 시간 : " + today.toLocaleString() + "<br>"); // toLocaleString(): 현재 시간을 반환하는 메서드
+            let mystr = new String("자바스크립트 공부하기"); // String 객체 생성
+            document.write("mystr의 내용 : " + mystr + "<br>"); // 문자열 속 br이 html 태그로써 작용
+            document.write("mystr의 길이 : " + mystr.length + "<br>");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML 태그에 리스너 작성</title>
+    </head>
+    <body>
+        <p>HTML 태그에 리스너 작성</p>
+        <hr>
+        <p onmouseover="this.style.backgroundColor='orchid'" 
+        onmouseout="this.style.backgroundColor='white'">
+        마우스 올리면 orchid 색으로 변경</p>
+    </body>
+    <!-- html 태그 내에 이벤트 리스너를 만듦 -->
+    <!-- 텍스트에 마우스 올리면 텍스트가 있는 줄이 orchid색이 되고,
+     마우스를 떼면 white색이 됨 -->
+</html>
+
+
+<!-- 이벤트: 브라우저의 상태 변화(더블클릭, 드래그, 클릭 등등등)를 자바스크립트 코드에 알리는 것을 이벤트라 함 -->
+<!-- 이벤트 리스너: 자바스크립트에서 이벤트를 받을때 특정 응답을 하는 코드를 의미-->
+<!-- 이벤트 리스너는 코드 앞에 on 붙임 ex) onmousedown, onkeydown -->
+<!-- 이벤트 리스너 코드 작성 방법.
+ 1. html 태그 내에 작성
+ 2. dom 객체의 이벤트 리스너 프로퍼티(필드)에 작성
+ 3. dom 객체가 가진 addEventListener() 메서드를 사용 
+ 4. 익명 함수로 이벤트 리스너 정의 -->
