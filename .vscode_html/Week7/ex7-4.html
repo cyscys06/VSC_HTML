@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Array 객체의 메소드 활용</title>
+        <script>
+            function pr(msg, arr) { 
+                document.write(msg + arr.toString() + "<br>"); 
+            }
+        </script>
+    </head>
+    <body>
+    <h3>Array 객체의 메소드 활용</h3>
+    <hr>
+        <script>
+            let a = new Array("황", "김", "이");
+            let b = new Array("박");
+            let c;
+            
+            pr("배열 a = ", a);
+            pr("배열 b = ", b);
+            document.write("<hr>");
+            
+            c = a.concat(b); // a와 b를 연결한 새 배열
+            pr("c = a.concat(b)후 c = ", c);
+            pr("c = a.concat(b)후 a = ", a);
+            
+            c = a.join("##"); // 배열의 원소 사이에 구분자(매개변수)를 넣어서 반환
+            pr("c = a.join() 후 c = ", c);
+            pr("c = a.join() 후 a = ", a);
+            
+            c = a.reverse(); // a.reverse(): a의 원소 순서를 뒤집음
+            pr("c= a.reverse() 후 c = ", c);
+            pr("c= a.reverse() 후 a = ", a);
+            
+            c = a.slice(1, 2); // 인덱스 슬라이싱
+            pr("c= a.slice(1, 2) 후 c = ", c);
+            pr("c= a.slice(1, 2) 후 a = ", a);
+            
+            c = a.sort(); // a.sort(): 숫자는 기본 오름차순, 문자열은 사전식
+            pr("c= a.sort() 후 c = ", c);
+            pr("c= a.sort() 후 a = ", a);
+            
+            c = a.toString(); // toString(): 디폴트 구분자(,)를 넣어 문자열 생성
+            document.write("a.toString() : " + c); // c 는 문자열
+        </script>
+    </body>
+</html>

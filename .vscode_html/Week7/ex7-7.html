@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>String 객체의 메소드 활용</title>
+    </head>
+    <body>
+        <h3>String 객체의 메소드 활용</h3>
+        <hr>
+        <script>
+            let a = new String("Boys and Girls");
+            let b = "!!";
+            
+            document.write("a : " + a + "<br>");
+            document.write("b : " + b + "<br><hr>");
+            document.write(a.charAt(0) + "<br>");
+            document.write(a.concat(b, "입니다") + "<br>");
+            document.write(a.indexOf("s") + "<br>"); // 매개변수 문자열이 처음 존재하는 인덱스 반환
+            document.write(a.indexOf("And") + "<br>"); // 없는 값이면 -1 반환
+            document.write(a.slice(5, 8) + "<br>"); // 슬라이싱
+            document.write(a.substr(5, 3) + "<br>"); // 부분문자열 분리
+            document.write(a.toUpperCase() + "<br>"); 
+            document.write(a.replace("and", "or") + "<br>");
+            document.write(" kitae ".trim() + "<br><hr>"); // 왼쪽, 오른쪽 끝 공백 제거
+            
+            let sub = a.split(" "); // 매개변수를 구분자로 해서 분리
+            document.write("a를 빈칸으로 분리<br>");
+            
+            for(let i=0; i<sub.length; i++) {
+                document.write("sub" + i + "=" + sub[i] + "<br>");
+            }
+            
+            document.write("<hr>String 메소드를 실행 후 a와 b 변함 없음<br>");
+            document.write("a : " + a + "<br>");
+            document.write("b : " + b + "<br>");
+        </script>
+    </body>
+</html>

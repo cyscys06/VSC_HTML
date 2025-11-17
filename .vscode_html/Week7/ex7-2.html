@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>[]로 배열 만들기</title>
+    </head>
+    <body>
+        <h3>[]로 배열 만들기</h3>
+        <hr>
+        <script>
+            let plots = [20, 5, 8, 15, 20]; 
+            // 1. 대괄호로 배열 생성하는 방법(대괄호로 생성한 거여도 자동으로 배열 객체로 간주)
+            // 하나의 배열에 여러 타입의 값을 섞어 넣을 수 있음
+            // 추가한 원소 개수만큼 배열 크기 자동으로 할당됨
+            document.write("var plots = [20, 5, 8, 15, 20]<br>"); // 출력함수 write(write, writeln있음)
+            for(let i=0; i<5; i++) {
+                let size = plots[i]; 
+                while(size>0) {
+                    document.write("*");
+                    size--;
+                }
+                document.write(plots[i] + "<br>");
+            }
+        </script>
+    </body>
+</html>
