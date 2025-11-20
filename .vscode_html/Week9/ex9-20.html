@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>키 이벤트</title>
+        <script>
+            function whatKeyDown(e) {
+                let str = "";
+                let div = document.getElementById("div");
+                
+                div.innerHTML = ""; // div 객체 내용 초기화
+                str += "e.key = " + e.key + "<br>"; // 이벤트 객체(e)의 키를 str에 저장
+                str += "e.code = " + e.code + "<br>"; // 이벤트 객체(e)의 코드를 str에 저장
+                div.innerHTML = str; // div 객체에 html 문자열(str) 출력
+            }
+        </script>
+    </head>
+    <body>
+        <h3>키 리스너와 키 이벤트 객체의 프로퍼티</h3>
+        <hr>
+        텍스트 창에 키를 눌러 보세요. Alt, Shift, Ctrl 키도 가능합니다.<br>
+        <input type="text" id="text" onkeydown="whatKeyDown(event)">
+        <!-- 
+        onkeydown: 키가 눌러지는 순간 호출. 모든 키에 대해 작동하는 이벤트
+        onkeypress: 문자 키와 <Enter>, <Space>, <Esc> 키에 대해서만 키가 눌러지는
+        순간에 onkeydown과 함께 추가로 발생하는 이벤트
+        -> 문자 키가 아닌 경우( ex) <F1>, <Shift>, <PgDn>, <Del>, <Ins> 등) 호출되지 않음
+        onkeyup: 눌러진 키가 떼어지는 순간에 발생하는 이벤트-->
+        <div id="div" style="background-color:skyblue; width:250px; height:50px"></div>
+    </body>
+</html>

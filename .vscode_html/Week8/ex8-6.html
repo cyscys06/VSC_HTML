@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>document.getElementsByTagName()</title>
+        <script>
+            function change() {
+                let spanArray = document.getElementsByTagName("span");
+                // 태그 이름이 span인 DOM 객체를 불러와서 innerHtml의 모든 텍스트를 배열에 저장
+
+                for(let i = 0; i < spanArray.length; i++) {
+                    var span = spanArray[i];
+                    // 배열에 있는 모든 텍스트(한 글자)의 스타일 변경
+                    // 스타일 변경은 한글자 텍스트 단위로만 가능함
+                    span.style.color = "orchid";
+                    span.style.fontSize = "20px";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3>내가 좋아하는 과일
+        <button onclick="change()">누르세요</button>
+        <!-- 버튼 누르면 change함수 실행-->
+        </h3>
+        
+        <hr>
+        저는 빨간 <span>사과</span>를 좋아해서
+        아침마다 한 개씩 먹고 있어요. 운동할 때는 중간 중간에
+        <span>바나나</span>를 먹지요. 탄수화물 섭취가 빨라
+        힘이 납니다. 또한 달콤한 향기를 품은 <span>체리</span>와
+        여름 냄새 물씬 나는 <span>자두</span>를 좋아합니다.
+        <!-- span 태그로 묶은 텍스트들이 change 함수에 사용됨-->
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!-- DOM 객체: 생성된 html 태그 당 한개씩 짝으로 생성되는 객체
+ 태그 포함관계에 따라 DOM 트리가 생성되며, 이때 DOM 객체들은 서로 부모 자식 관계임
+ -> DOM 객체는 DOM 트리에서 하나의 노드가 됨-->
+<!-- DOM 트리 루트는 항상 document-->
+<!-- html 태그의 구성
+ 1. 태그이름(엘리먼트 이름)
+ 2. 속성(id 등)
+ 3. css 스타일(style = )
+ 4. 이벤트 리스너(onclick, onmouseover 등등)
+ 5. 컨텐츠(태그 내부에 있는 값들)-->
+<!-- DOM 객체의 구성
+ 1. 프로퍼티: html 태그 속성 반영
+ 2. 메서드: DOM객체의 멤버 함수(html 태그를 제어 가능)
+ 3. 컬렉션: 자식 DOM 객체들의 주소를 가짐(부모인 DOM 객체 입장에서)
+ 4. 이벤트 리스너: html 태그에 작성된 이벤트 리스너를 반영
+ 5. css 스타일: html 태그에 설정된 css 스타일 정보를 반영함 -->
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML DOM 트리</title>
+    </head>
+    <body>
+        <h3>DOM 객체 p의 프로퍼티, 스타일, 이벤트 리스너</h3>
+        <hr>
+        <!-- id, 태그이름, 내부 html 등은 프로퍼티-->
+        <p id="firstP"
+            style="color:blue; background:yellow"
+            onclick="this.style.color='teal'">
+            이것은 <span style="color:red">문장입니다.
+            </span>
+        </p>
+        <script>
+            let p = document.getElementById("firstP"); // 메서드
+            let text = "p.id = " + p.id + "\n";
+            
+            text += "p.tagName = " + p.tagName + "\n";
+            text += "p.innerHTML = " + p.innerHTML + "\n";
+            text += "p.style.color = " + p.style.color + "\n";
+            text += "p.onclick = " + p.onclick + "\n"; // 이벤트 리스너
+            text += "p.childElementCount = " + p.childElementCount + "\n";
+            text += "너비 = " + p.offsetWidth + "\n";
+            text += "높이 = " + p.offsetHeight + "\n";
+            
+            alert(text);
+        </script>
+    </body>
+</html>

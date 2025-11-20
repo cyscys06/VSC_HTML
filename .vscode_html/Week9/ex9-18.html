@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>선택된 물품 계산하기</title>
+        <script>
+            let sum = 0;
+            function calc(cBox) {
+                if(cBox.checked) {
+                    sum += parseInt(cBox.value); 
+                    // 체크된 밸류면 가격 총합에 더하기
+                } else {
+                    sum -= parseInt(cBox.value);
+                    // 체크되지 않은 밸류면 총합에서 빼기
+                    // 총합 디폴트는 0이며, 한번 체크됐다 해제된 경우 총합에서 뺌
+                }
+                document.getElementById("sumtext").value = sum; 
+                // sumtext 객체의 밸류값에 sum 할당
+            }
+        </script>
+    </head>
+    <body>
+        <h3>물품을 선택하면 금액이 자동 계산됩니다</h3>
+        <hr>
+        <form>
+            <input type="checkbox" name="hap" value="10000"
+            onclick="calc(hap)">모자 1만원
+            <input type="checkbox" name="shose" value="30000"
+            onclick="calc(shose)">구두 3만원
+            <input type="checkbox" name="bag" value="80000"
+            onclick="calc(bag)">명품가방 8만원<br>
+            <!-- 체크박스 체크하거나 해제한경우(즉 클릭한경우) calc 메서드 실행-->
+            지불하실 금액 <input type="text" id="sumtext" value="0" >
+        </form>
+    </body>
+</html>
