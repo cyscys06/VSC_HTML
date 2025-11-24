@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>개인 홈페이지</title>
+
+    <style>
+        #profileImg {
+            width: 200px;
+            display: none;
+            margin-top: 10px;
+            border-radius: 8px;
+        }
+
+        button {
+            padding: 5px;
+            background: blue;
+            color: white;
+            border: none; /* 테두리 없음 */
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #3a66c7;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>개인 홈페이지</h1>
+
+    <div id = "introduce">
+        <h2>1. 자기소개</h2>
+        <p><b>이름: 최유성</b><br></p>
+        <p><b>학과: 컴퓨터공학과</b><br></p>
+        
+        <p>
+            <b>관심분야: OOP(리팩토링, 디자인 패턴 등), 알고리즘</b><br>
+            효율적인 OOP를 목적으로 하는 여러 가지 수단에 대해 관심이 많으며,<br>
+            코테 준비를 위한 알고리즘에도 관심을 갖고 있습니다. 
+        </p>
+
+        <button onclick="showImage()">사진</button>
+        <img id="profileImg" src="image/photo.png" alt="프로필 사진">
+
+        <br><br>
+    </div>
+
+    <div id = "hobby">
+        <h2>2. 취미</h2>
+        <p>게임, 음악 감상이 취미입니다.</p>
+
+        <ul>
+            <h3>취미 관련 링크</h3><br>
+            <li>
+                <a href = "https://music.youtube.com/playlist?list=PLsDCwdwIfUMTH8uQTB9RMvG_Syvp3jkFI" 
+                target = "_blank">유튜브 뮤직</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id = "link">
+        <h2>3. 링크 모음</h2>
+        <ul>
+            <li>
+                <a href = "https://eclass.kunsan.ac.kr/Main.do?cmd=viewHome">
+                    군산대 e클래스</a>
+            </li>
+            <li>
+                <a href = https://padlet.com/milaboratory2017/2025-2-x95bx2qmgxwshorr>
+                    기초 웹 프로그래밍 수업 게시판</a>
+            </li>
+            <li>
+                <a href = "https://solved.ac/">
+                    solved.ac(백준) 사이트</a>
+            </li>
+            <li>
+                <a href = "https://github.com/">
+                    개인 깃허브</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4. 연락처</h2>
+        <p>이메일: example@mail.com</p>
+        <p>전화번호: 010-1234-5678</p>
+    </div>
+
+    <script>
+        function showImage() {
+            document.getElementById("profileImg").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
