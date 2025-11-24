@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>키 이벤트 응용</title>
+        <style>
+            td { width:50px; height:50px; border:1px solid orchid; }
+        </style>
+        <script>
+            let tds;
+            let prev = 0, next = 0;
+            
+            window.onload = function () { // 웹 페이지의 로딩 완료 시 실행
+                tds = document.getElementsByTagName("td");
+                tds[next].style.backgroundColor = "orchid";
+            }
+            
+            window.onkeydown = function (e) {
+                switch(e.key) { // 발생한 이벤트값의 키(눌린 방향키) 에 대해
+                    case "ArrowDown" : // 아래 방향키
+                        if(next / 3 >= 2) {
+                            return; // 이미 맨 아래쪽 셀이면 이동 X
+                        }
+                        next += 3;
+                        break;
+                    case "ArrowUp" : // 위 방향키
+                        if(next / 3 < 1) {
+                            return; // 이미 맨 위쪽 셀이면 이동 X
+                        }
+                        next -= 3;
+                        break;
+                    case "ArrowLeft" : // 왼쪽 방향키
+                        if(next % 3 == 0) {
+                            return; // 이미 맨 왼쪽 셀이면 이동 X
+                        }
+                        next--;
+                        break;
+                    case "ArrowRight" : // 오른쪽 방향키
+                        if(next % 3 == 2) {
+                            return; // 이미 맨 오른쪽 셀이면 이동 X
+                        }
+                        next++;
+                        break;
+                }
+                tds[next].style.backgroundColor = "orchid";
+                tds[prev].style.backgroundColor = "white";
+                prev = next;
+            }
+        </script>
+    </head>
+    <body>
+        <h3>화살표 키로 셀 위로 이동하기</h3><hr>
+        <table>
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+            <tr><td></td><td></td><td></td></tr>
+        </table>
+    </body>
+</html>

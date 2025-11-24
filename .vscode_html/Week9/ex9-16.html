@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>onfocus와 onblur</title>
+        <script>
+            function checkFilled(obj) {
+                if(obj.value == "") { // obj에 입력된 것이 없다면
+                    obj.focus(); // obj에 다시 포커스
+                    // 포커스: 특정 입력창 등에 마우스를 올려놓을때 그 입력창에서 입력에 대한 독점권을 갖는 것
+                    // 독점권을 갖는 동안은 다른 입력창으로 커서를 옮길 수 없음
+                    // onfocus: 포커스를 얻을 때 발생하는 이벤트의 리스너(현재 html 태그를 클릭하면 해당 html은 포커스를 얻음)
+                    // onblur: 포커스를 읽을 때 발생하는 이벤트의 리스너(다른 html 태그를 클릭하면 포커스를 잃음)
+                }
+            }
+        </script>
+    </head>
+    <body onload="document.getElementById('name').focus();"> <!-- 기본으로 포커스된 상태 -->
+        <h3>onfocus와 onblur</h3>
+        <hr>
+        <p>이름을 입력하지 않고 다른 창으로 이동할 수 없습니다.</p>
+        <form>
+            이름 <input type="text" id="name"
+            onblur = "checkFilled(this)"><p> <!-- 입력값이 들어오기 전까진 onfocus가 유지됨-->
+            학번 <input type="text">
+        </form>
+    </body>
+</html>
