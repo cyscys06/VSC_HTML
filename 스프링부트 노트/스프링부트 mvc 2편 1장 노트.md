@@ -63,7 +63,9 @@
 타임리프 텍스트 출력(th:text 사용) {
     model.addAttribute("data", "Hello Spring!");
     -> addAttribute(name, value): 특정 값을 갖고있는 value 객체를 name이라는 이름으로 생성
-    `<span th:text="${data}">` 
+    -> View 파트에서 사용할 데이터가 key(name), value(value) 쌍 형태로 전달된다 보면 됨
+     
+    <span th:text="${data}">
     -> 태그는 상관없으며 span 말고도 다양한 태그 안에서 속성으로써 사용됨
     -> "${data}": data라는 이름으로 저장했던 객체가 갖고있는 값 출력(변수 표현식 사용)
 
@@ -71,11 +73,19 @@
     -> 이런 예약어들을 리터럴로 출력하기 위한 방법이 이스케이프 문자(이미아는거)
     model.addAttribute("data", "Hello <b>Spring!</b>");
     -> value 안의 <>기호가 이스케이프로 간주돼서 리터럴로 출력됨
-
+    
     -> 안에서 리터럴 없이 태그로써 사용하려면 th:inline 사용
     h1><span th:inline="none">[[...]] vs [(...)]</span> ([[]]는 text, [()]는 utext)
     -> inline 속성 값이 none이어서 [[]], [()] 해석 못함
     -> 안에 들은 예악어들을 이스케이프가 아니라 예약어의 기능으로써 사용 가능
+
+    text utext 차이 {
+        text: html 태그(<>)를 이스케이프 처리해서 출력
+        -> 예약어를 사용한다 해도 자동으로 이스케이프 처리 해줘서 그냥 리터럴 문자열로 출력이 가능
+
+        utext: html 태그를 이스케이프 처리하지 않고 출력
+        -> <> 입력시 태그로써 사용되는 형태로 출력됨
+    }
 }
 
 
@@ -123,6 +133,7 @@
 URL 링크 생성(@{} 표현식, th:href 사용) {
     model.addAttribute("param1", "data1");
     model.addAttribute("param2", "data2");
+    data1, data2이라는 값을 각각 가지는 객체 param1, param2 생성
     -> param1 = data1; 
     param2 = data2;
 

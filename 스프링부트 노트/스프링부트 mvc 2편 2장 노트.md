@@ -15,9 +15,9 @@
         name : th:field 에서 지정한 변수 이름과 같다. name="itemName"
         value : th:field 에서 지정한 변수의 값을 사용한다. value=""
     }
-    
 
- 
+
+    
 
 
     <input type="checkbox" th:field="${item.regions}" th:value="${region.key}" class="form-check-input" disabled>

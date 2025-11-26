@@ -4,69 +4,84 @@
     <meta charset="UTF-8">
     <title>개인 홈페이지</title>
     <style>
-        @import url(webPageStyle.css);
+        @import url(sectionStyle.css);
     </style>
 </head>
-<body>
-    <h1>2500191 최유성의 개인 홈페이지입니다.</h1>
-    <hr><br>
+<body style = "background-color: #D9DAD8;">
+    <div id = "titleSection">
+        <h1>2500191 최유성의 개인 홈페이지입니다.</h1>
+        <br><hr>
+    </div>
     
+    
+
+    <div id = "imageSection">
+        <img id = "profileImg" src = "image/photo.png" alt = "프로필 사진">
+        <button id = "ProfileImageButton" onclick = "showImage()">사진 보기</button>
+    </div>
+
+    <div> <!-- 디폴트 div만 적용 -->
+        <h2>자기소개</h2>
+        <p>
+            <b>
+                이름: 최유성<br>
+                학과: 컴퓨터소프트웨어특성화대학(IT융합통신공학과)<br>
+                학번: 2500191<br>
+            </b>
+        </p>
+        <p>
+            <b>관심분야: OOP(리팩토링, 디자인 패턴 등), <br>
+                웹 개발(백엔드), 알고리즘 등</b><br>
+            효율적인 OOP를 위한 여러 가지 수단에 대해 관심이 많으며,<br>
+            코테 준비를 위한 알고리즘 공부에도 관심을 갖고 있습니다.<br>
+            나중에는 웹 개발 프로젝트에서 백엔드 파트로 활동해보고 싶습니다. 
+        </p>
+    </div>
+    <!-- 끝 -->
+
     <div>
-        <div id = "imageSection">
-            <img id = "profileImg" src = "image/photo.png" alt = "프로필 사진">
-            <button id = "ProfileImageButton" onclick = "showImage()">사진 보기</button>
-        </div>
-        <div id = "infoSection">
-            <h2>1. 자기소개</h2>
-            <p>
-                <b>
-                    이름: 최유성<br>
-                    학과: 컴퓨터소프트웨어특성화대학(IT융합통신공학과)<br>
-                    학번: 2500191<br>
-                </b>
-            </p>
-            <p>
-                <b>관심분야: OOP(리팩토링, 디자인 패턴 등), 알고리즘</b><br>
-                효율적인 OOP를 위한 여러 가지 수단에 대해 관심이 많으며,<br>
-                코테 준비를 위한 알고리즘 공부에도 관심을 갖고 있습니다. 
-            </p>
-        </div>
-    </div>
-
-    <div id = "hobbySection">
         <h2>취미</h2>
-        <p>게임, 음악 감상, 사진 촬영을 좋아합니다.</p>
-
-        <a href = "https://music.youtube.com/playlist?list=PLsDCwdwIfUMTH8uQTB9RMvG_Syvp3jkFI" 
-        target = "_blank">자주 듣는 음악 플레이리스트</a>
-        <!-- 새로운 창에서 링크 열기 -->
-
+        <p>음악 감상, 사진 촬영을 좋아합니다.</p>
+        <ul>
+            <li>
+                <a href = "https://music.youtube.com/playlist?list=PLsDCwdwIfUMTH8uQTB9RMvG_Syvp3jkFI" 
+                    target = "_blank">자주 듣는 음악 플레이리스트</a>
+            </li>
+            <li>
+                <a href = "https://www.instagram.com/take_the_world6?igsh=aWhrc2U3NDllb2kz&utm_source=qr"
+                    target = "_blank">SNS 사진 계정</a>
+            </li>
+        </ul>
     </div>
 
-    <div class = "parents">
+    <div id = "linkSection">
         <h2>각종 링크 모음</h2>
         <ul>
                 <a href = "https://eclass.kunsan.ac.kr/Main.do?cmd=viewHome" target = "_blank">
-                    <img src = "image/eClass.png"></a>
+                    <img class = "linkImage" src = "image/eClass.png" ></a>
                     <br>
 
-                <a href = https://padlet.com/milaboratory2017/2025-2-x95bx2qmgxwshorr>
-                    <img src = "image/webProgramming.png"></a>
+                <a href = "https://padlet.com/milaboratory2017/2025-2-x95bx2qmgxwshorr" target = "_blank">
+                    <img class = "linkImage" src = "image/webProgramming.png" ></a>
                     <br>
 
-                <a href = "https://solved.ac/">
-                    <img src = "image/solvedAC.png " width = "250px"></a>
+                <a href = "https://solved.ac/" target = "_blank">
+                    <img class = "linkImage" src = "image/solvedAC.png "></a>
                     <br>
-                <a href = "https://github.com/">
-                    <img src = "image/gitHub.png" height="90px"></a>
+                <a href = "https://github.com/" target = "_blank">
+                    <img class = "linkImage" src = "image/gitHub.png"></a>
                     <br>
         </ul>
     </div>
 
     <div class = "parents">
         <h2>연락처</h2>
-        <p>email: cyscys06@gmail.com</p>
-        <p>TEL. 010-9535-5428</p>
+        <p>
+            <b>email: cyscys06@gmail.com<br>
+            TEL. 010-9535-5428
+            </b>
+        </p>
+
     </div>
 
     <script>

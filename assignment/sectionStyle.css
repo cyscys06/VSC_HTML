@@ -1,0 +1,69 @@
+/* 프로필 이미지가 위치하는 섹션 */
+#imageSection {
+    background-color: gray;
+    width: 250px;
+    height: 290px;
+    border-radius: 25px;
+    margin-top: 155px;
+    margin-right: 122.54px;
+    float: right;
+}
+
+/* 사진 보여주거나 숨기는 버튼 */ 
+#ProfileImageButton{
+    margin-top: 135px;
+    margin-left: 90px;
+    display: block;
+    border: none;
+}
+
+/* 프로필 사진 이미지 */ 
+#profileImg {
+    display: none;
+    border-radius: 20px;
+    /* 이미지 가운데 정렬 */
+    height: 250px;
+    width: 205px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* 홈페이지 메인 문구 스타일 */
+#titleSection {
+    background-color: #9FA0A4;
+    width: 1065px;
+    height: 50px;
+    line-height: 25px;
+    margin-top: 20px;
+    margin-bottom: 62.5px;
+}
+
+/* 링크 모음 이미지 스타일 */
+.linkImage {
+    width: 212.5px; 
+    height: 42.5px;
+    object-fit: cover;
+}
+
+/* 모든 버튼에 대해 적용되는 스타일 */
+button {
+    padding: 7px; 
+    border-radius: 7px;
+    cursor: pointer;
+} 
+
+/* 모든 div 블록에 대해 적용되는 스타일 */
+div {
+    background-color: #B1B6B7;
+    float: left;
+    width: 500px;
+    height: 290px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    border-radius: 25px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
