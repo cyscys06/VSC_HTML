@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>윈도우 열기</title>
+        <script>
+            function load(URL) {
+                window.open(URL, "myWin", "left=300,top=300,width=400,height=300");
+            }
+        </script>
+    </head>
+    <body>
+        <h3>window.open()으로 윈도우 열기</h3>
+        <hr>
+        
+        <a href="javascript:load('http://www.graceland.com')">
+        엘비스 프레슬리 홈 페이지</a><br>
+        <a href="javascript:load('http://www.universalorlando.com')">
+        유니버설 올랜드 홈 페이지</a><br>
+        <a href="javascript:load('http://www.disneyworld.com')">
+        디즈니월드 홈 페이지</a><br>
+    </body>
+</html>
+
+<!-- window 객체: 열려 있는 브라우저 윈도우, 탭 윈도우의 속성을 나타내는 객체
+-> 브라우저 윈도우나 탭 윈도우마다 별도의 window 객체가 생성되는것-->
+
+<!-- window 객체 생성하는 3가지 방법 
+ 1. 브라우저가 새로운 웹 페이지를 로드할 때 
+2.<iframe> 태그 당 하나의 window 객체 생성
+3. 자바스크립트 코드로 윈도우 열기 시 window 객체 생성 -->
+
+<!--자바스크립트 코드로 윈도우 객체 접근하는법
+-> window, window.self, self -->
+
+<!-- window.open(sURL, sWindowName, sFeature)
+ 첫번째 매개변수: 윈도우에 출력할 웹페이지 주소
+ 두번째 매개변수: 새로 열 윈도우 이름. 생략 가능
+ 세번째 매개변수: 윈도우 모양, 크기 같은 속성을 표현. 콤마를 구분자로 해서 여러 속성들을 작성 가능(생략도 가능)-->
+
+ <!-- 이름이 이미 존재하는 윈도우 객체로 다시 open 메서드를 사용할때, 해당 이름을 가진 윈도우 창에 다시 웹페이지를 여는 것-->
+
+ <!-- 윈도우 닫기
+  win.close(): 윈도우 객체 삭제하기 -->
