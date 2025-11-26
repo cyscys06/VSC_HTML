@@ -5,7 +5,7 @@
     height: 290px;
     border-radius: 25px;
     margin-top: 155px;
-    margin-right: 122.54px;
+    margin-right: 122.5px;
     float: right;
 }
 
@@ -24,8 +24,7 @@
     /* 이미지 가운데 정렬 */
     height: 250px;
     width: 205px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
 }
