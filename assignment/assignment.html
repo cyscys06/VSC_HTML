@@ -34,7 +34,7 @@
                 웹 개발(백엔드), 알고리즘 등</b><br>
             효율적인 OOP를 위한 여러 가지 수단에 대해 관심이 많으며,<br>
             코테 준비를 위한 알고리즘 공부에도 관심을 갖고 있습니다.<br>
-            나중에는 웹 개발 프로젝트에서 백엔드 파트로 활동해보고 싶습니다. 
+            나중에는 웹 개발 프로젝트에서 백엔드로 활동해보고 싶습니다. 
         </p>
     </div>
 
@@ -91,12 +91,12 @@
 
         function showImage() {
             count += 1;
-            if (count % 2 == 1) {
+            if (count % 2 == 1) { // 사진 열었을때
                 image.style.display = "block";
                 showProfileImageButton.style.margin = "auto";
                 showProfileImageButton.innerHTML = "사진 숨기기";
             }
-            else {
+            else { // 사진 닫았을때
                 image.style.display = "none";
                 showProfileImageButton.style.display = "block";
                 showProfileImageButton.style.marginTop = "135px";
